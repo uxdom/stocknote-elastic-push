@@ -1,0 +1,23 @@
+{
+  "name": "stocknote",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "amazon-product-api": "^0.4.4",
+    "amazon-products-api": "0.0.4",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "elasticsearch": "^14.2.2",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "jsontoxml": "^1.0.0",
+    "morgan": "~1.9.0",
+    "path": "^0.12.7",
+    "querystring": "^0.2.0",
+    "xml-js": "^1.6.2"
+  }
+}

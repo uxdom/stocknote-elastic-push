@@ -1,0 +1,3208 @@
+{
+	"Local": {
+		"Marketplace": {
+			"BR": {
+				"Endpoint": "/api/doRequest",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Keywords"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author", "BrowseNode", "Condition", "ItemPage", "Keywords", "MaximumPrice", "MinimumPrice", "Power", "Publisher", "Sort", "Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					}
+				]
+			},
+			"CA": {
+				"Endpoint": "webservices.amazon.ca/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"Operations": {
+					"ItemSearch": {
+						"Parameters": {
+							"AudienceRating": {
+								"Default": null,
+								"Description": "Movie ratings based on MPAA ratings or age, depending upon the locale.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Checkbox",
+								"ValidValues": [
+									{
+										"Value": "G",
+										"Description": ""
+									},
+									{
+										"Value": "PG",
+										"Description": ""
+									},
+									{
+										"Value": "PG-13",
+										"Description": ""
+									},
+									{
+										"Value": "R",
+										"Description": ""
+									},
+									{
+										"Value": "NC-17",
+										"Description": ""
+									},
+									{
+										"Value": "NR",
+										"Description": ""
+									},
+									{
+										"Value": "Unrated",
+										"Description": ""
+									},
+									{
+										"Value": "Family Viewing",
+										"Description": ""
+									}
+								]
+							}
+						}
+					}
+				},
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinimumPrice"]
+					},
+					{
+						"Value": "Apparel",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Automotive",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Blended",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "DVD",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Grocery",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Jewelry",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Kitchen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "LawnAndGarden",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Luggage",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PetSupplies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Shoes",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Tools",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					}
+				]
+			},
+			"CN": {
+				"Endpoint": "webservices.amazon.cn/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Apparel",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Appliances",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Automotive",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Grocery",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Home",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Neighborhood","Sort","Title"]
+					},
+					{
+						"Value": "HomeImprovement",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Jewelry",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Kitchen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","ReleaseDate","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PCHardware",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "PetSupplies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Photo",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Shoes",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Video",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","ReleaseDate","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					}
+				]
+			},
+			"DE": {
+				"Endpoint": "webservices.amazon.de/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"Operations": {
+					"ItemSearch": {
+						"Parameters": {
+							"AudienceRating": {
+								"Default": null,
+								"Description": "Movie ratings based on MPAA ratings or age, depending upon the locale.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Checkbox",
+								"ValidValues": [
+									{
+										"Value": "6",
+										"Description": ""
+									},
+									{
+										"Value": "12",
+										"Description": ""
+									},
+									{
+										"Value": "16",
+										"Description": ""
+									}
+								]
+							}
+						}
+					}
+				},
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","FutureLaunchDate","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Apparel",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Appliances",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Automotive",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Blended",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Classical",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","Composer","Conductor","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Orchestra","Sort","Title"]
+					},
+					{
+						"Value": "DVD",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "ForeignBooks",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice"]
+					},
+					{
+						"Value": "Grocery",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HomeGarden",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Jewelry",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Kitchen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Lighting",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Luggage",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MP3Downloads",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Magazines",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PCHardware",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PetSupplies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Photo",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Shoes",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Tools",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","Artist","AudienceRating","Author","Availability","Brand","Composer","Conductor","Director","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Neighborhood","Orchestra","Power","Publisher","ReleaseDate","Sort","Title"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "UnboxVideo",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					}
+				]
+			},
+			"ES": {
+				"Endpoint": "webservices.amazon.es/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Apparel",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Automotive",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "DVD",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "ForeignBooks",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","Director","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Jewelry",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Kitchen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "LawnAndGarden",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Lighting",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Luggage",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MP3Downloads",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PCHardware",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Shoes",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "Tools",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","Artist","AudienceRating","Author","Availability","Brand","Composer","Conductor","Director","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Neighborhood","Orchestra","Power","Publisher","ReleaseDate","Sort","Title"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					}
+				]
+			},
+			"FR": {
+				"Endpoint": "webservices.amazon.fr/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"Operations": {
+					"ItemSearch": {
+						"Parameters": {
+							"AudienceRating": {
+								"Default": null,
+								"Description": "Movie ratings based on MPAA ratings or age, depending upon the locale.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Checkbox",
+								"ValidValues": [
+									{
+										"Value": "PG",
+										"Description": ""
+									},
+									{
+										"Value": "12",
+										"Description": ""
+									},
+									{
+										"Value": "16",
+										"Description": ""
+									},
+									{
+										"Value": "18",
+										"Description": ""
+									}
+								]
+							}
+						}
+					}
+				},
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Apparel",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Appliances",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Blended",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Classical",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","Composer","Conductor","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Orchestra","Sort","Title"]
+					},
+					{
+						"Value": "DVD",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "ForeignBooks",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HomeImprovement",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Jewelry",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Kitchen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "LawnAndGarden",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Lighting",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Luggage",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MP3Downloads",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PCHardware",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PetSupplies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Shoes",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					}
+				]
+			},
+			"IN": {
+				"Endpoint": "webservices.amazon.in/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Apparel",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Automotive",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "DVD",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice"]
+					},
+					{
+						"Value": "Grocery",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MerchantId","Sort","Title"]
+					},
+					{
+						"Value": "HomeGarden",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Jewelry",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Luggage",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PCHardware",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PetSupplies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Shoes",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					}
+				]
+			},
+			"IT": {
+				"Endpoint": "webservices.amazon.it/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Apparel",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Automotive",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "DVD",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "ForeignBooks",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Garden",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Neighborhood","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice"]
+					},
+					{
+						"Value": "Grocery",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Jewelry",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Kitchen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Lighting",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Luggage",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MP3Downloads",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PCHardware",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Shoes",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "Tools",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","Artist","AudienceRating","Author","Availability","Brand","Composer","Conductor","Director","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Neighborhood","Orchestra","Power","Publisher","ReleaseDate","Sort","Title"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					}
+				]
+			},
+			"JP": {
+				"Endpoint": "webservices.amazon.co.jp/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Apparel",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Appliances",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Automotive",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Blended",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Classical",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","Composer","Conductor","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Orchestra","Sort","Title"]
+					},
+					{
+						"Value": "CreditCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "DVD",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","ReleaseDate","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "ForeignBooks",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice"]
+					},
+					{
+						"Value": "Grocery",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Hobbies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HomeImprovement",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Industrial",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Jewelry",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Kitchen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "MP3Downloads",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","ReleaseDate","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PCHardware",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PetSupplies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Shoes",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Video",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "VideoDownload",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","ReleaseDate","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					}
+				]
+			},
+			"MX": {
+				"Endpoint": "webservices.amazon.com.mx/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinimumPrice"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "DVD",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "HomeImprovement",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Kitchen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					}
+				]
+			},
+			"UK": {
+				"Endpoint": "webservices.amazon.co.uk/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId"]
+					},
+					{
+						"Value": "Apparel",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Appliances",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Automotive",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Blended",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Classical",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","Composer","Conductor","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Orchestra","Sort","Title"]
+					},
+					{
+						"Value": "DVD",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Grocery",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HomeGarden",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Jewelry",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Kitchen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Lighting",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Luggage",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MP3Downloads",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PCHardware",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PetSupplies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Shoes",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					},
+					{
+						"Value": "Tools",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","Artist","AudienceRating","Author","Availability","Brand","Composer","Conductor","Director","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Neighborhood","Orchestra","Power","Publisher","ReleaseDate","Sort","Title"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "UnboxVideo",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "VHS",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Watches",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MerchantId","MinPercentageOff","Sort","Title"]
+					}
+				]
+			},
+			"US": {
+				"Endpoint": "webservices.amazon.com/onca/xml",
+				"ValidOperations": ["BrowseNodeLookup", "CartAdd", "CartClear", "CartCreate", "CartGet", "CartModify", "ItemLookup", "ItemSearch", "SimilarityLookup"],
+				"Operations": {
+					"ItemSearch": {
+						"Parameters": {
+							"AudienceRating": {
+								"Default": null,
+								"Description": "Movie rating based on MPAA ratings or age.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Checkbox",
+								"ValidValues": [
+									{
+										"Value": "G",
+										"Description": ""
+									},
+									{
+										"Value": "PG",
+										"Description": ""
+									},
+									{
+										"Value": "PG-13",
+										"Description": ""
+									},
+									{
+										"Value": "R",
+										"Description": ""
+									},
+									{
+										"Value": "NC-17",
+										"Description": ""
+									},
+									{
+										"Value": "NR",
+										"Description": ""
+									},
+									{
+										"Value": "Unrated",
+										"Description": ""
+									}
+								]
+							}
+						}
+					}
+				},
+				"SearchCategories": [
+					{
+						"Value": "All",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinimumPrice"]
+					},
+					{
+						"Value": "Appliances",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "ArtsAndCrafts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Automotive",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Baby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Beauty",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Blended",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords"]
+					},
+					{
+						"Value": "Books",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Power","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Collectibles",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Author","Availability","Composer","Conductor","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Orchestra","Sort","Title"]
+					},
+					{
+						"Value": "Electronics",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Fashion",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "FashionBaby",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "FashionBoys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "FashionGirls",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "FashionMen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "FashionWomen",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "GiftCards",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","MaximumPrice","MerchantId","MinimumPrice","Neighborhood","Sort","Title"]
+					},
+					{
+						"Value": "Grocery",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HealthPersonalCare",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "HomeGarden",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Neighborhood","Sort","Title"]
+					},
+					{
+						"Value": "Industrial",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "KindleStore",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "LawnAndGarden",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Luggage",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","Brand","Condition","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MP3Downloads",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Magazines",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Merchants",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MobileApps",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Movies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Music",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Artist","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "MusicalInstruments",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "OfficeProducts",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PCHardware",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "PetSupplies",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Software",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "SportingGoods",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Tools",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Toys",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "UnboxVideo",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Actor","AudienceRating","Availability","Director","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "VideoGames",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","Brand","ItemPage","Keywords","Manufacturer","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					},
+					{
+						"Value": "Wine",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Publisher","Sort","Title"]
+					},
+					{
+						"Value": "Wireless",
+						"AvailableFrom": "Timestamp",
+						"ValidParameters": ["Author","Availability","ItemPage","Keywords","MaximumPrice","MerchantId","MinPercentageOff","MinimumPrice","Sort","Title"]
+					}
+				]
+			}
+		}
+	},
+	"Global": {
+		"Operations": {
+			"ItemSearch": {
+				"Value" : "ItemSearch",
+				"Description": "The ItemSearch operation returns items that meet your search criteria. ItemSearch returns up to 10 search results per page.",
+				"Parameters": {
+					"Keywords": {
+						"Default": null,
+						"Description": "A word or phrase that describes an item, such as a title, author, and so on.",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"DependentOn": null,
+						"Display": "Textbox"
+					},
+					"ResponseGroup": {
+						"Default": ["Images","ItemAttributes","Offers"],
+						"Description": "The type of product data you want returned. <a id='RespnseGroupList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Checkbox",
+						"ValidValues": [
+							{
+								"Value": "Accessories",
+								"Description": "The Accessories response group returns up to five ASINs and titles of accessories associated with items in the response."
+							},
+							{
+								"Value": "AlternateVersions",
+								"Description": "The AlternateVersions response group returns all of the available media formats for a book or music title. Sample formats include Paperback, Audio CD, and MP3 Download. This response group works only with the Books, ForeignBooks, KindleStore, MP3Downloads, and Music product categories."
+							},
+							{
+								"Value": "BrowseNodes",
+								"Description": "The BrowseNodes response group returns the browse node names and IDs associated with the items returned in the response."
+							},
+							{
+								"Value": "EditorialReview",
+								"Description": "For each item in the response, the EditorialReview response group returns Amazon's review of the item, which, on the Detail page, is labeled the Product Description."
+							},
+							{
+								"Value": "Images",
+								"Description": "The Images response group returns the URLs to all available images of an item in three sizes: small, medium, and large."
+							},
+							{
+								"Value": "ItemAttributes",
+								"Description": "The ItemAttributes response group returns a potentially large number of attributes that describe an item."
+							},
+							{
+								"Value": "ItemIds",
+								"Description": "The ItemIds response group returns the ASINs for all items returned in the response."
+							},
+							{
+								"Value": "Large",
+								"Description": "Large is a parent response group that returns the results of the following response groups: Accessories, BrowseNodes, Medium, Offers, Reviews, Similarities, Tracks."
+							},
+							{
+								"Value": "Medium",
+								"Description": "Medium is a parent response group that returns the results of the following response groups: EditorialReview, Images, ItemAttributes, OfferSummary, Request, SalesRank, Small."
+							},
+							{
+								"Value": "OfferFull",
+								"Description": "The OfferFull response group returns comprehensive information about an offer. OfferFull is a parent response group that returns the results of the Offers response group."
+							},
+							{
+								"Value": "OfferListings",
+								"Description": "The OfferListings response group returns the OfferListings for items returned in the response. The values returned are similar to those returned by the Offers response group minus the values returned by the OfferSummary response group. OfferListings returns shipping options, including IsEligibleForSuperSavingShipping which specifies whether the item qualifies for super saver shipping."
+							},
+							{
+								"Value": "Offers",
+								"Description": "The Offers response group is a parent response group that returns the contents of the OfferSummary response group plus, by default, offer listing information."
+							},
+							{
+								"Value": "OfferSummary",
+								"Description": "The OfferSummary response group returns, for each item in the response, the number of offer listings and the lowest price for each condition type."
+							},
+							{
+								"Value": "PromotionSummary",
+								"Description": "The PromotionSummary response group returns summary information about a promotion, including the type of promotion, the promotion ID, eligibility requirements, and text that describes the specifics of the promotion."
+							},
+							{
+								"Value": "RelatedItems",
+								"Description": "The RelatedItems response group returns items related to an item specified."
+							},
+							{
+								"Value": "Reviews",
+								"Description": "The Reviews response group returns the URL to an iframe that contains customer reviews."
+							},
+							{
+								"Value": "SalesRank",
+								"Description": "The SalesRank response group returns the sales rank for each item in the response. One is the highest rating, while a large number means the item is not as popular."
+							},
+							{
+								"Value": "SearchBins",
+								"Description": "The SearchBins response group groups the items returned into bins."
+							},
+							{
+								"Value": "Similarities",
+								"Description": "The Similarities response group returns titles and ASINs of five items that are similar to the one specified in the request."
+							},
+							{
+								"Value": "Small",
+								"Description": "The Small response group returns basic information about items in a response. The information includes the item's ASIN, title, product group, and author."
+							},
+							{
+								"Value": "Tracks",
+								"Description": "The Tracks response group returns the title and number of each track on each CD in the response."
+							},
+							{
+								"Value": "Variations",
+								"Description": "The Variations response group is a parent response group that returns the contents of the VariationSummary response group plus other variation details, such as item attributes, offers, and offer listings for each variation in the response."
+							},
+							{
+								"Value": "VariationMatrix",
+								"Description": "The VariationMatrix response group returns, for a given parent ASIN, the variation dimension name and value of each child ASIN."
+							},
+							{
+								"Value": "VariationOffers",
+								"Description": "The VariationOffers response group retrieves the offers for the children of a parent ASIN. Variations is the parent response group of VariationOffers."
+							},
+							{
+								"Value": "VariationSummary",
+								"Description": "The VariationSummary response group provides the lowest price, highest price, lowest sale price, and highest sale price for all child ASINs in a response."
+							}
+						]
+					},
+					"Sort": {
+						"Default": null,
+						"Description": "How items in the response are ordered.",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"BrowseNode": {
+						"Default": null,
+						"Description": "Browse nodes are numbers that identify product categories. <a id='BrowseNodeList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/RG_BrowseNodes.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Actor": {
+						"Default": null,
+						"Description": "Actor name associated with the item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Artist": {
+						"Default": null,
+						"Description": "Artist name associated with the item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Author": {
+						"Default": null,
+						"Description": "Author name associated with the item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Availability": {
+						"Default": null,
+						"Description": "Enables the ItemSearch operation to return only available items.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "Available",
+								"Description": "Returns only those items that are available."
+							}
+						]
+					},
+					"Brand": {
+						"Default": null,
+						"Description": "Brand name associated with an item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Composer": {
+						"Default": null,
+						"Description": "Composer name associated with an item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Condition": {
+						"Default": "New",
+						"Description": "Returns items by condition type.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "New",
+								"Description": "New item."
+							},
+							{
+								"Value": "Used",
+								"Description": "Used item."
+							},
+							{
+								"Value": "Collectible",
+								"Description": "Collectible item."
+							},
+							{
+								"Value": "Refurbished",
+								"Description": "Refurbished item."
+							},
+							{
+								"Value": "All",
+								"Description": "A separate set of responses is returned for each valid value of Condition."
+							}
+						]
+					},
+					"Conductor": {
+						"Default": null,
+						"Description": "Conductor name associated with the item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Director": {
+						"Default": null,
+						"Description": "Director name associated with an item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"IncludeReviewsSummary": {
+						"Default": true,
+						"Description": "When set to true, returns the reviews summary URL.",
+						"Mandatory": "NONE",
+						"Type": "Boolean",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": true,
+								"Description": "Returns the reviews summary within the Reviews frame."
+							},
+							{
+								"Value": false,
+								"Description": "Does not return the reviews summary."
+							}
+						]
+					},
+					"ItemPage": {
+						"Default": null,
+						"Description": "Returns a specific page of items from all of the items in a response.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Manufacturer": {
+						"Default": null,
+						"Description": "Manufacturer name associated with an item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"MaximumPrice": {
+						"Default": null,
+						"Description": "Specifies the maximum item price in the response. Prices are returned in the lowest currency denomination. For example, 3241 is $32.41.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"MerchantId": {
+						"Default": null,
+						"Description": "Filters search results and offer listings to only items sold by Amazon.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "Amazon",
+								"Description": "Limit the response to only items sold by Amazon."
+							}
+						]
+					},
+					"MinimumPrice": {
+						"Default": null,
+						"Description": "Specifies the minimum item price in the response. Prices are returned in the lowest currency denomination. For example, 3241 is $32.41.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"MinPercentageOff": {
+						"Default": null,
+						"Description": "Specifies the minimum percentage off the item price.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Orchestra": {
+						"Default": null,
+						"Description": "Orchestra name associated with an item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Power": {
+						"Default": null,
+						"Description": "Performs a book search using a complex query string. <br/>This parameter works only when SearchIndex is set to ‘Books’.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"DependentOn": "SearchIndex",
+						"Display": "Textbox"
+					},
+					"Publisher": {
+						"Default": null,
+						"Description": "Publisher name associated with an item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"RelatedItemPage": {
+						"Default": null,
+						"Description": "Each ItemLookup request can return a maximum of 10 related items. <br/>RelatedItemPage specifies which set of 10 items to return. <br/>This parameter is valid only when used with the RelatedItems response group.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"RelationshipType": {
+						"Default": null,
+						"Description": "Returns related items by the specified value. <br/>This parameter is required when used with the RelatedItems response group.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "AuthorityTitle",
+								"Description": "Links a non-buyable ASIN TitleAuthority parent with its buyable children."
+							},
+							{
+								"Value": "DigitalMusicArranger",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicComposer",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicConductor",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicEnsemble",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicLyricist",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicPerformer",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicPrimaryArtist",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicProducer",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicRemixer",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicSongWriter",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "Episode",
+								"Description": "Relates an Unbox Season (parent) to Episodes (children) from that season."
+							},
+							{
+								"Value": "Season",
+								"Description": "Relates an Unbox Series (parent) to its Seasons (children)."
+							},
+							{
+								"Value": "Tracks",
+								"Description": "Relates an MP3 Album (parent) to its Tracks (children)."
+							}
+						]
+					},
+					"SearchIndex": {
+						"Default": null,
+						"Description": "The product category to search.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"DependentOn": "Marketplace",
+						"Display": "Locale"
+					},
+					"Title": {
+						"Default": null,
+						"Description": "Title associated with the item.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"TruncateReviewsAt": {
+						"Default": 1000,
+						"Description": "Type a value to specify the length of the item review. <br/>By default, reviews are truncated to 1000 characters. To return complete reviews, type 0.",
+						"Mandatory": "NONE",
+						"Type": "Integer",
+						"Display": "Textbox"
+					},
+					"VariationPage": {
+						"Default": null,
+						"Description": "Returns a specific page of variations from the ItemSearch operation. <br/>By default, ItemSearch returns all variations.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					}
+				},
+				"Type": "SEARCH",
+				"URL": "http://docs.aws.amazon.com/AWSECommerceService/latest/DG/ItemSearch.html"
+			},
+			"BrowseNodeLookup": {
+				"Value" : "BrowseNodeLookup",
+				"Description": "The BrowseNodeLookup operation returns the specified browse node’s name, children, and ancestors. A browse node is also known as a product category.",
+				"Parameters": {
+					"BrowseNodeId": {
+						"Default": null,
+						"Description": "Browse nodes are numbers that identify product categories. <a id='BrowseNodeList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/RG_BrowseNodes.html' target='_blank'>Learn more</a>",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"ResponseGroup": {
+						"Default": "BrowseNodeInfo",
+						"Description": "The type of product data you want returned. <a id='RespnseGroupList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Checkbox",
+						"ValidValues": [
+							{
+								"Value": "BrowseNodeInfo",
+								"Description": "For a given browse node ID, the BrowseNodeInfo response group returns the browse node name and ID of the child and parent browse nodes."
+							},
+							{
+								"Value": "MostGifted",
+								"Description": "The MostGifted response group returns the ASINs and titles of the ten items given as gifts most within a specified browse node."
+							},
+							{
+								"Value": "NewReleases",
+								"Description": "The NewReleases response group returns the ASIN and title of newly released items in a specified browse node."
+							},
+							{
+								"Value": "MostWishedFor",
+								"Description": "The MostWishedFor response group returns the ASINs and titles of the ten items given as the items listed on the greatest number of wishlists within a specified browse node."
+							},
+							{
+								"Value": "TopSellers",
+								"Description": "The TopSellers response group returns the ASINs and titles of the ten best sellers within a specified browse node."
+							}
+						]
+					}
+				},
+				"Type": "LOOKUP",
+				"URL": "http://docs.aws.amazon.com/AWSECommerceService/latest/DG/BrowseNodeLookup.html"
+			},
+			"CartAdd": {
+				"Value" : "CartAdd",
+				"Description": "The CartAdd operation adds items to an existing remote shopping cart.",
+				"Parameters": {
+					"CartId": {
+						"Default": null,
+						"Description": "Alphanumeric token returned by CartCreate that identifies a cart.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"HMAC": {
+						"Default": null,
+						"Description": "The Hash Message Authentication Code is an encrypted alphanumeric token used to authenticate requests.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Item": {
+						"Default": null,
+						"Description": "Container.",
+						"Mandatory": "REQUIRED",
+						"Type": "Container",
+						"Display": "Container",
+						"ValidValues": {
+							"ASIN": {
+								"Default": null,
+								"Description": "The Amazon Standard Identification Number of an item.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Textbox"
+							},
+							"OfferListingId": {
+								"Default": null,
+								"Description": "A token that uniquely identifies an item that is sold by a merchant, including Amazon. The ID is returned by the Offers and OfferFull response groups.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Textbox"
+							},
+							"Quantity": {
+								"Default": null,
+								"Description": "The number of items to add to cart.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Textbox"
+							}
+						}
+					},
+					"ResponseGroup": {
+						"Default": "Cart",
+						"Description": "The type of product data you want returned. <a id='RespnseGroupList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Checkbox",
+						"ValidValues": [
+							{
+								"Value": "Cart",
+								"Description": "The Cart response group provides information about a specified remote shopping cart and the items in it."
+							},
+							{
+								"Value": "CartSimilarities",
+								"Description": "The CartSimilarities response group returns the ASINs and titles of items that are similar to the one the customer added to the shopping cart."
+							},
+							{
+								"Value": "CartTopSellers",
+								"Description": "The CartTopSellers response group returns the ASINs and titles of the top five, best sellers in the root category of the item specified in the cart operation."
+							},
+							{
+								"Value": "CartNewReleases",
+								"Description": "The CartNewReleases response group returns the ASINs and titles of the top five new releases in the root category of the item specified in the cart operation."
+							}
+						]
+					}
+				},
+				"Type": "CART",
+				"URL": "http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CartAdd.html"
+			},
+			"CartClear": {
+				"Value" : "CartClear",
+				"Description": "The CartClear operation removes all items in a remote shopping cart, including SavedForLater items.",
+				"Parameters": {
+					"CartId": {
+						"Default": null,
+						"Description": "Alphanumeric token returned by CartCreate that identifies a cart.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"HMAC": {
+						"Default": null,
+						"Description": "The Hash Message Authentication Code is an encrypted alphanumeric token used to authenticate requests.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"ResponseGroup": {
+						"Default": "Cart",
+						"Description": "The type of product data you want returned. <a id='RespnseGroupList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Checkbox",
+						"ValidValues": [
+							{
+								"Value": "Cart",
+								"Description": "The Cart response group provides information about a specified remote shopping cart and the items in it."
+							}
+						]
+					}
+				},
+				"Type": "CART",
+				"URL": "http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CartClear.html"
+			},
+			"CartCreate": {
+				"Value" : "CartCreate",
+				"Description": "The CartCreate operation creates a remote shopping cart.",
+				"Parameters": {
+					"Item": {
+						"Default": null,
+						"Description": "Container.",
+						"Mandatory": "REQUIRED",
+						"Type": "Container",
+						"Display": "Container",
+						"ValidValues": {
+							"ASIN": {
+								"Default": null,
+								"Description": "The Amazon Standard Identification Number of an item.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Textbox"
+							},
+							"OfferListingId": {
+								"Default": null,
+								"Description": "A token that uniquely identifies an item that is sold by a merchant, including Amazon.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Textbox"
+							},
+							"Quantity": {
+								"Default": null,
+								"Description": "The number of items to add to cart.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Textbox"
+							}
+						}
+					},
+					"ResponseGroup": {
+						"Default": "Cart",
+						"Description": "The type of product data you want returned. <a id='RespnseGroupList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Checkbox",
+						"ValidValues": [
+							{
+								"Value": "Cart",
+								"Description": "The Cart response group provides information about a specified remote shopping cart and the items in it."
+							},
+							{
+								"Value": "CartSimilarities",
+								"Description": "The CartSimilarities response group returns the ASINs and titles of items that are similar to the one the customer added to the shopping cart."
+							},
+							{
+								"Value": "CartTopSellers",
+								"Description": "The CartTopSellers response group returns the ASINs and titles of the top five, best sellers in the root category of the item specified in the cart operation."
+							},
+							{
+								"Value": "CartNewReleases",
+								"Description": "The CartNewReleases response group returns the ASINs and titles of the top five new releases in the root category of the item specified in the cart operation."
+							}
+						]
+					}
+				},
+				"Type": "CART",
+				"URL": "http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CartCreate.html"
+			},
+			"CartGet": {
+				"Value" : "CartGet",
+				"Description": "The CartGet operation returns the IDs, quantities, and prices of all items in a remote shopping cart, including SavedForLater items.",
+				"Parameters": {
+					"CartId": {
+						"Default": null,
+						"Description": "Alphanumeric token returned by CartCreate that identifies a cart.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"CartItemId": {
+						"Default": null,
+						"Description": "Alphanumeric token that uniquely identifies an item in a cart.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"HMAC": {
+						"Default": null,
+						"Description": "The Hash Message Authentication Code is an encrypted alphanumeric token used to authenticate requests.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"ResponseGroup": {
+						"Default": "Cart",
+						"Description": "The type of product data you want returned. <a id='RespnseGroupList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Checkbox",
+						"ValidValues": [
+							{
+								"Value": "Cart",
+								"Description": "The Cart response group provides information about a specified remote shopping cart and the items in it."
+							},
+							{
+								"Value": "CartSimilarities",
+								"Description": "The CartSimilarities response group returns the ASINs and titles of items that are similar to the one the customer added to the shopping cart."
+							},
+							{
+								"Value": "CartTopSellers",
+								"Description": "The CartTopSellers response group returns the ASINs and titles of the top five, best sellers in the root category of the item specified in the cart operation."
+							},
+							{
+								"Value": "CartNewReleases",
+								"Description": "The CartNewReleases response group returns the ASINs and titles of the top five new releases in the root category of the item specified in the cart operation."
+							}
+						]
+					}
+				},
+				"Type": "CART",
+				"URL": "http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CartGet.html"
+			},
+			"CartModify": {
+				"Value" : "CartModify",
+				"Description": "The CartModify operation updates the item quantity in a remote shopping cart. CartModify can also move items between the active cart and the SavedforLater.",
+				"Parameters": {
+					"CartId": {
+						"Default": null,
+						"Description": "Alphanumeric token returned by CartCreate that identifies a cart.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"HMAC": {
+						"Default": null,
+						"Description": "The Hash Message Authentication Code is an encrypted alphanumeric token used to authenticate requests.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"Item": {
+						"Default": null,
+						"Description": "Container.",
+						"Mandatory": "REQUIRED",
+						"Type": "Container",
+						"Display": "Container",
+						"ValidValues": {
+							"Action": {
+								"Default": null,
+								"Description": "Move items between the active cart and the saved for later. Valid values include <b>MoveToCart</b> or <b>SaveForLater</b>",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Textbox"
+							},
+							"CartItemId": {
+								"Default": null,
+								"Description": "Specifies an item to be modified in the cart where N is a positive integer between 1 and 10, inclusive.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Textbox"
+							},
+							"Quantity": {
+								"Default": null,
+								"Description": "Specifies number of items to be added to the cart where N is a positive integer.",
+								"Mandatory": "NONE",
+								"Type": "String",
+								"Display": "Textbox"
+							}
+						}
+					},
+					"ResponseGroup": {
+						"Default": "Cart",
+						"Description": "The type of product data you want returned. <a id='RespnseGroupList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Checkbox",
+						"ValidValues": [
+							{
+								"Value": "Cart",
+								"Description": "The Cart response group provides information about a specified remote shopping cart and the items in it."
+							},
+							{
+								"Value": "CartSimilarities",
+								"Description": "The CartSimilarities response group returns the ASINs and titles of items that are similar to the one the customer added to the shopping cart."
+							},
+							{
+								"Value": "CartTopSellers",
+								"Description": "The CartTopSellers response group returns the ASINs and titles of the top five, best sellers in the root category of the item specified in the cart operation."
+							},
+							{
+								"Value": "CartNewReleases",
+								"Description": "The CartNewReleases response group returns the ASINs and titles of the top five new releases in the root category of the item specified in the cart operation."
+							}
+						]
+					}
+				},
+				"Type": "CART",
+				"URL": "http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CartModify.html"
+			},
+			"ItemLookup": {
+				"Value" : "ItemLookup",
+				"Description": "The ItemLookup operation returns item attributes. Use the ResponseGroup parameter to specify which attributes you want returned.",
+				"Parameters": {
+					"ItemId": {
+						"Default": null,
+						"Description": "A number that uniquely identifies an item. The number is specified by the parameter IdType.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"IdType": {
+						"Default": "ASIN",
+						"Description": "Item identifier type.",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "ASIN",
+								"Description": "Amazon Standard Identification Number"
+							},
+							{
+								"Value": "SKU",
+								"Description": "Stock Keeping Unit"
+							},
+							{
+								"Value": "UPC",
+								"Description": "Universal Product Code"
+							},
+							{
+								"Value": "EAN",
+								"Description": "International Article Number"
+							},
+							{
+								"Value": "ISBN",
+								"Description": "International Standard Book Number"
+							}
+						]
+					},
+					"ResponseGroup": {
+						"Default": ["Images","ItemAttributes","Offers"],
+						"Description": "The type of product data you want returned. <a id='RespnseGroupList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Checkbox",
+						"ValidValues": [
+							{
+								"Value": "Accessories",
+								"Description": "The Accessories response group returns up to five ASINs and titles of accessories associated with items in the response."
+							},
+							{
+								"Value": "AlternateVersions",
+								"Description": "The AlternateVersions response group returns all of the available media formats for a book or music title. Sample formats include Paperback, Audio CD, and MP3 Download. This response group works only with the Books, ForeignBooks, KindleStore, MP3Downloads, and Music product categories."
+							},
+							{
+								"Value": "BrowseNodes",
+								"Description": "The BrowseNodes response group returns the browse node names and IDs associated with the items returned in the response."
+							},
+							{
+								"Value": "EditorialReview",
+								"Description": "For each item in the response, the EditorialReview response group returns Amazon's review of the item, which, on the Detail page, is labeled the Product Description."
+							},
+							{
+								"Value": "Images",
+								"Description": "The Images response group returns the URLs to all available images of an item in three sizes: small, medium, and large."
+							},
+							{
+								"Value": "ItemAttributes",
+								"Description": "The ItemAttributes response group returns a potentially large number of attributes that describe an item."
+							},
+							{
+								"Value": "ItemIds",
+								"Description": "The ItemIds response group returns the ASINs for all items returned in the response."
+							},
+							{
+								"Value": "Large",
+								"Description": "Large is a parent response group that returns the results of the following response groups: Accessories, BrowseNodes, Medium, Offers, Reviews, Similarities, Tracks."
+							},
+							{
+								"Value": "Medium",
+								"Description": "Medium is a parent response group that returns the results of the following response groups: EditorialReview, Images, ItemAttributes, OfferSummary, Request, SalesRank, Small."
+							},
+							{
+								"Value": "OfferFull",
+								"Description": "The OfferFull response group returns comprehensive information about an offer. OfferFull is a parent response group that returns the results of the Offers response group."
+							},
+							{
+								"Value": "OfferListings",
+								"Description": "The OfferListings response group returns the OfferListings for items returned in the response. The values returned are similar to those returned by the Offers response group minus the values returned by the OfferSummary response group. OfferListings returns shipping options, including IsEligibleForSuperSavingShipping which specifies whether the item qualifies for super saver shipping."
+							},
+							{
+								"Value": "Offers",
+								"Description": "The Offers response group is a parent response group that returns the contents of the OfferSummary response group plus, by default, offer listing information."
+							},
+							{
+								"Value": "OfferSummary",
+								"Description": "The OfferSummary response group returns, for each item in the response, the number of offer listings and the lowest price for each condition type."
+							},
+							{
+								"Value": "PromotionSummary",
+								"Description": "The PromotionSummary response group returns summary information about a promotion, including the type of promotion, the promotion ID, eligibility requirements, and text that describes the specifics of the promotion."
+							},
+							{
+								"Value": "RelatedItems",
+								"Description": "The RelatedItems response group returns items related to an item specified."
+							},
+							{
+								"Value": "Reviews",
+								"Description": "The Reviews response group returns the URL to an iframe that contains customer reviews."
+							},
+							{
+								"Value": "SalesRank",
+								"Description": "The SalesRank response group returns the sales rank for each item in the response."
+							},
+							{
+								"Value": "Similarities",
+								"Description": "The Similarities response group returns titles and ASINs of five items that are similar to the one specified in the request."
+							},
+							{
+								"Value": "Small",
+								"Description": "The Small response group returns basic information about items in a response. The information includes the item's ASIN, title, product group, and author."
+							},
+							{
+								"Value": "Tracks",
+								"Description": "The Tracks response group returns the title and number of each track on each CD in the response."
+							},
+							{
+								"Value": "Variations",
+								"Description": "The Variations response group is a parent response group that returns the contents of the VariationSummary response group plus other variation details, such as item attributes, offers, and offer listings for each variation in the response."
+							},
+							{
+								"Value": "VariationImages",
+								"Description": "The VariationImages response group displays different image variations of the same item in four sizes: swatch, small, medium, and large."
+							},
+							{
+								"Value": "VariationMatrix",
+								"Description": "The VariationMatrix response group returns, for a given parent ASIN, the variation dimension name and value of each child ASIN."
+							},
+							{
+								"Value": "VariationOffers",
+								"Description": "The VariationOffers response group retrieves the offers for the children of a parent ASIN. Variations is the parent response group of VariationOffers."
+							},
+							{
+								"Value": "VariationSummary",
+								"Description": "The VariationSummary response group provides the lowest price, highest price, lowest sale price, and highest sale price for all child ASINs in a response."
+							}
+						]
+					},
+					"Condition": {
+						"Default": "New",
+						"Description": "Specifies an item's condition.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "New",
+								"Description": "New item."
+							},
+							{
+								"Value": "Used",
+								"Description": "Used item."
+							},
+							{
+								"Value": "Collectible",
+								"Description": "Collectible item."
+							},
+							{
+								"Value": "Refurbished",
+								"Description": "Refurbished item."
+							},
+							{
+								"Value": "All",
+								"Description": "A separate set of responses is returned for each valid value of Condition."
+							}
+						]
+					},
+					"IncludeReviewsSummary": {
+						"Default": true,
+						"Description": "When set to true, returns the reviews summary URL.",
+						"Mandatory": "NONE",
+						"Type": "Boolean",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": true,
+								"Description": "Returns the reviews summary within the Reviews frame."
+							},
+							{
+								"Value": false,
+								"Description": "Does not return the reviews summary."
+							}
+						]
+					},
+					"MerchantId": {
+						"Default": null,
+						"Description": "Filters search results and offer listings to only items sold by Amazon",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "Amazon",
+								"Description": "Only returns items sold by Amazon."
+							}
+						]
+					},
+					"RelatedItemPage": {
+						"Default": null,
+						"Description": "Each ItemLookup request can return a maximum of 10 related items. <br/>RelatedItemPage specifies which set of 10 items to return. <br/>This parameter is only valid when used with the RelatedItems response group. ",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"RelationshipType": {
+						"Default": null,
+						"Description": "Returns related items by the specified value. <br/>This parameter is required when used with the RelatedItems response group.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "AuthorityTitle",
+								"Description": "Links a non-buyable ASIN TitleAuthority parent with its buyable children."
+							},
+							{
+								"Value": "DigitalMusicArranger",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicComposer",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicConductor",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicEnsemble",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicLyricist",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicPerformer",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicPrimaryArtist",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicProducer",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicRemixer",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "DigitalMusicSongWriter",
+								"Description": "Non-buyable child of both MP3 albums and tracks."
+							},
+							{
+								"Value": "Episode",
+								"Description": "Relates an Unbox Season (parent) to Episodes (children) from that season."
+							},
+							{
+								"Value": "Season",
+								"Description": "Relates an Unbox Series (parent) to its Seasons (children)."
+							},
+							{
+								"Value": "Tracks",
+								"Description": "Relates an MP3 Album (parent) to its Tracks (children)."
+							}
+						]
+					},
+					"SearchIndex": {
+						"Default": null,
+						"Description": "The product category to search.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Locale"
+					},
+					"TruncateReviewsAt": {
+						"Default": 1000,
+						"Description": "Enter a value to specify the length of the item review. <br/>By default, reviews are truncated to 1000 characters. To return complete reviews, enter 0. ",
+						"Mandatory": "NONE",
+						"Type": "Integer",
+						"Display": "Textbox"
+					},
+					"VariationPage": {
+						"Default": "All",
+						"Description": "Returns a specific page of variations from the ItemSearch operation. <br/>By default, ItemSearch returns all variations.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Textbox"
+					}
+				},
+				"Type": "LOOKUP",
+				"URL": "http://docs.aws.amazon.com/AWSECommerceService/latest/DG/ItemLookup.html"
+			},
+			"SimilarityLookup": {
+				"Value" : "SimilarityLookup",
+				"Description": "The SimilarityLookup operation returns products that are similar to one or more items specified in the request.",
+				"Parameters": {
+					"Condition": {
+						"Default": "New",
+						"Description": "Filters results by condition type.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "New",
+								"Description": "New item."
+							},
+							{
+								"Value": "Used",
+								"Description": "Used item."
+							},
+							{
+								"Value": "Collectible",
+								"Description": "Collectible item."
+							},
+							{
+								"Value": "Refurbished",
+								"Description": "Refurbished item."
+							},
+							{
+								"Value": "All",
+								"Description": "A separate set of responses is returned for each valid value of Condition."
+							}
+						]
+					},
+					"ItemId": {
+						"Default": null,
+						"Description": "Specifies the ASIN you want to look up.",
+						"Mandatory": "REQUIRED",
+						"Type": "String",
+						"Display": "Textbox"
+					},
+					"MerchantId": {
+						"Default": null,
+						"Description": "Filters search results and offer listings to only items sold by Amazon.",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "Amazon",
+								"Description": "Limit the response to only items sold by Amazon."
+							}
+						]
+					},
+					"SimilarityType": {
+						"Default": "Intersection",
+						"Description": "'Intersection' returns the intersection of items that are similar to all of the ASINs specified. 'Random' returns the union of items that are similar to all of the ASINs specified.",
+						"Mandatory": "NONE",
+						"Type": "String",
+						"Display": "Dropdown",
+						"ValidValues": [
+							{
+								"Value": "Intersection",
+								"Description": "Returns the intersection of items that are similar to all of the ASINs specified."
+							},
+							{
+								"Value": "Random",
+								"Description": "Returns the union of items that are similar to all of the ASINs specified."
+							}
+						]
+					},
+					"ResponseGroup": {
+						"Default": "Small",
+						"Description": "The type of product data you want returned. <a id='RespnseGroupList' href='http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html' target='_blank'>Learn more</a>",
+						"Mandatory": "POPULAR",
+						"Type": "String",
+						"Display": "Checkbox",
+						"ValidValues": [
+							{
+								"Value": "Accessories",
+								"Description": "The Accessories response group returns up to five ASINs and titles of accessories associated with items in the response."
+							},
+							{
+								"Value": "BrowseNodes",
+								"Description": "The BrowseNodes response group returns the browse node names and IDs associated with the items returned in the response."
+							},
+							{
+								"Value": "EditorialReview",
+								"Description": "For each item in the response, the EditorialReview response group returns Amazon's review of the item, which, on the Detail page, is labeled the Product Description."
+							},
+							{
+								"Value": "Images",
+								"Description": "The Images response group returns the URLs to all available images of an item in three sizes: small, medium, and large."
+							},
+							{
+								"Value": "ItemAttributes",
+								"Description": "The ItemAttributes response group returns a potentially large number of attributes that describe an item."
+							},
+							{
+								"Value": "ItemIds",
+								"Description": "The ItemIds response group returns the ASINs for all items returned in the response."
+							},
+							{
+								"Value": "Large",
+								"Description": "Large is a parent response group that returns the results of the following response groups: Accessories, BrowseNodes, Medium, Offers, Reviews, Similarities, Tracks."
+							},
+							{
+								"Value": "Medium",
+								"Description": "Medium is a parent response group that returns the results of the following response groups: EditorialReview, Images, ItemAttributes, OfferSummary, Request, SalesRank, Small."
+							},
+							{
+								"Value": "Offers",
+								"Description": "The Offers response group is a parent response group that returns the contents of the OfferSummary response group plus, by default, offer listing information."
+							},
+							{
+								"Value": "OfferSummary",
+								"Description": "The OfferSummary response group returns, for each item in the response, the number of offer listings and the lowest price for each condition type."
+							},
+							{
+								"Value": "PromotionSummary",
+								"Description": "The PromotionSummary response group returns summary information about a promotion, including the type of promotion, the promotion ID, eligibility requirements, and text that describes the specifics of the promotion."
+							},
+							{
+								"Value": "Reviews",
+								"Description": "The Reviews response group returns the URL to an iframe that contains customer reviews."
+							},
+							{
+								"Value": "SalesRank",
+								"Description": "The SalesRank response group returns the sales rank for each item in the response."
+							},
+							{
+								"Value": "Similarities",
+								"Description": "The Similarities response group returns titles and ASINs of five items that are similar to the one specified in the request."
+							},
+							{
+								"Value": "Small",
+								"Description": "The Small response group returns basic information about items in a response. The information includes the item's ASIN, title, product group, and author."
+							},
+							{
+								"Value": "Tracks",
+								"Description": "The Tracks response group returns the title and number of each track on each CD in the response."
+							},
+							{
+								"Value": "Variations",
+								"Description": "The Variations response group is a parent response group that returns the contents of the VariationSummary response group plus other variation details, such as item attributes, offers, and offer listings for each variation in the response."
+							},
+							{
+								"Value": "VariationSummary",
+								"Description": "The VariationSummary response group provides the lowest price, highest price, lowest sale price, and highest sale price for all child ASINs in a response."
+							}
+						]
+					}
+				},
+				"Type": "LOOKUP",
+				"URL": "http://docs.aws.amazon.com/AWSECommerceService/latest/DG/SimilarityLookup.html"
+			}
+		}
+	}
+}

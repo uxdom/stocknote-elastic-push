@@ -1,0 +1,10 @@
+{
+    "amazon_product_api": {
+        "awsId": "your product api access key ID",
+        "awsSecret": "produc api secret key",
+        "awsTag": "your affiliate tag / tracking id"
+    },
+    "es_endpoints": [{
+        "host": "elastic search endpoint"
+    }]
+}

@@ -1,0 +1,7 @@
+[{
+	"Title":"ES1",
+	"Index":"es1",
+	"Endpoint":"https://search-stocknote-k7dd3xfu5neuobjnptb2nfkyga.us-east-1.es.amazonaws.com",
+	"Indices":"Products",
+	"Type":"amazon_product_adverts"
+}]

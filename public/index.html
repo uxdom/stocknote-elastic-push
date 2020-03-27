@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>StockNote</title>
+        <!-- Shortcut -->
+        <link rel="shortcut icon" href="favicon.ico" />
+        <!-- CSS Files -->
+        <link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/custom/custom-min.css" rel="stylesheet">
+        <link href="assets/css/lib/default.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/css/lib/bootstrap-multiselect.css">
+        <!-- Scripts -->
+        <script src="assets/js/lib/jquery.js"></script>
+        <script src="assets/js/lib/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/js/lib/bootstrap-multiselect.js"></script>
+        <script src="assets/js/custom/custom-min.js"></script>
+        <script src="assets/js/lib/sha2.js"></script>
+        <script src="assets/js/lib/FileSaver.min.js"></script>
+        <script src="assets/js/lib/highlight.pack.js"></script>
+        <script src="assets/js/lib/vkbeautify.js"></script>
+        <script type="text/javascript" src="assets/js/lib/ZeroClipboard.js"></script>
+
+<style>
+.product-box {
+    border: 1px solid #eee;
+    float: left;
+    margin: 4px 4px 4px 4px;
+    position: relative;
+    width: 132px;
+    padding: 4px;
+    font-family: Helvetica;
+
+}
+.product-title h3{
+    margin: 2px 3px 0 2px;
+    min-width: 40px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+    position: relative;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    height: 45px;
+}
+
+.product-price {
+    text-align: center;
+    color: #900;
+    font-weight: bold;
+}
+
+.a-icon-cart {
+    left: 2px;
+    top: 2px;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-position: -35px -5px;
+    background-image: url(../images/amzn-sprite.png);
+    background-repeat: no-repeat;
+    background-size: 400px 600px;
+    -webkit-background-size: 400px 600px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.a-icon-shop-now {
+    left: 2px;
+    top: 2px;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background: 0 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.a-button {
+    background: #d8dde6;
+    display: block;
+    padding: 0;
+    vertical-align: middle;
+    height: 31px;
+    *height: 29px;
+    border: 1px solid;
+    border-color: #bcc1c8 #bababa #adb2bb;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none!important;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 130px;
+    box-sizing: border-box;
+    margin-top: 11px;
+}
+
+
+.a-button-text {
+    position: relative;
+    z-index: 10;
+    color: #111;
+    font-size: 12px;
+    text-align: center;
+    line-height: 29px;
+    display: block;
+    font-family: Arial,sans-serif;
+    white-space: nowrap;
+    background-color: transparent;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    padding: 0 2px 0 29px;
+}
+
+
+.a-button-text.centered {
+    padding: 0 2px;
+}
+
+.a-button-input {
+    position: absolute;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    outline: 0;
+    border: 0;
+    overflow: visible;
+    cursor: pointer;
+    opacity: .01;
+    filter: alpha(opacity=1);
+}
+
+
+.a-button-primary {
+    border-color: #cba957 #bf942a #aa8326;
+    background: #f0c14b;
+}
+
+.a-button-primary:active {
+    border-color: #aa8326 #bf942a #bf942a;
+}
+
+.a-button-primary:hover {
+    border-color: #c59f43 #aa8326 #957321;
+}
+
+.a-button-primary:focus {
+    outline: 0;
+    border-color: #e47911;
+    -webkit-box-shadow: 0 0 3px rgba(228,121,17,.5);
+    -moz-box-shadow: 0 0 3px rgba(228,121,17,.5);
+    box-shadow: 0 0 3px rgba(228,121,17,.5);
+}
+
+.a-button-inner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+
+.a-button-primary .a-button-inner {
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+    background-color: #f7dfa5;
+    background: -webkit-gradient(linear,left top,left bottom,from(#f7dfa5),to(#f0c14b));
+    background: -webkit-linear-gradient(top,#f7dfa5,#f0c14b);
+    background: -moz-linear-gradient(top,#f7dfa5,#f0c14b);
+    background: -ms-linear-gradient(top,#f7dfa5,#f0c14b);
+    background: -o-linear-gradient(top,#f7dfa5,#f0c14b);
+    background: #f3d078;
+}
+
+.lt-ie9 .a-button-primary .a-button-inner {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7dfa5', endColorstr='#fff0c14b', GradientType=0);
+}
+
+.a-button-primary:active .a-button-inner {
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.2) inset;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2) inset;
+    background-color: #f0c14b;
+    background-image: none;
+}
+
+.lt-ie9 .a-button-primary:active .a-button-inner {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.a-button-primary:hover .a-button-inner {
+    background-color: #f5d78e;
+    background: -webkit-gradient(linear,left top,left bottom,from(#f5d78e),to(#eeb933));
+    background: -webkit-linear-gradient(top,#f5d78e,#eeb933);
+    background: -moz-linear-gradient(top,#f5d78e,#eeb933);
+    background: -ms-linear-gradient(top,#f5d78e,#eeb933);
+    background: -o-linear-gradient(top,#f5d78e,#eeb933);
+    background: #f1c860;
+}
+
+.lt-ie9 .a-button-primary:hover .a-button-inner {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5d78e', endColorstr='#ffeeb933', GradientType=0);
+}
+</style>
+    </head>
+    
+    <body id="Home">
+        <div class="content row" id="TopNavBar">
+            <div class="col-sm-12">
+                <nav class="navbar navbar-custom navbar-static-top navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                           
+                            <a id="PAAPILogo" class="navbar-brand" href="#">StockNote</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="ScratchPadHeader">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a id="HistoryNav" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">History <span id="HistoryBadge" class="badge">0</span><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" id="HistoryList">
+                                    </ul>
+                                </li>
+                                <li class="nav-separator"></li>
+                                
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav> <!-- Navigation Header -->
+             </div>
+        </div><!-- Navigation Header Row -->
+
+        <div class="container-fluid">
+            <div class="row-offcanvas">
+                <div id="Sidebar">
+                <!-- Left Section Starts here -->
+                    <div class="col-sm-12">
+                        <div class="mini-submenu">
+                            <span class="glyphicon glyphicon-chevron-right" style="padding:4px;"></span>
+                        </div>
+                        <div id="LeftSidePanelMinWidth" class="panel panel-default">
+                            <div class="panel-heading-a">Select operation<span id="SlideSubmenu" href="#" class="glyphicon glyphicon-chevron-left pull-right"></span></div>
+                            <div id="LeftSidePanel" class="panel-body">
+                            </div>
+                        </div> <!-- Select Operation Panel -->
+                    </div>
+                </div>
+
+                <!-- Right Section Starts Here -->
+                <div id="RightSection">
+                    <div id="LandingPage" class="container col-sm-12">
+                        <p class="landing-page-header">StockNote - A tool for Amazon Associates</p>
+                        <div class="hr-a"></div>
+                        <p>StockNote is a tool to help Amazon Associates send product XML data to Elastic Search for search indexing. Tool retrieves items from Amazon Product Advertising API, sends XML product data to remote URLs such as ElasticSearch, Firebase, and other web hooks.</p> 
+                        <div class="container-fluid" style="padding-left:0px;min-height: 400px">
+                            
+                           
+                        </div>
+                    </div> 
+
+                    <div id="OperationSpecificPage" class="col-sm-12">
+                        <div class="panel panel-default" style="display:none">
+                            <div id="SelIconCP" class="panel-heading-a" data-toggle="collapse" data-target="#CommonParamsPanel">Common parameters<span id="CommonParamsHeaderCollapse"></span><span class="glyphicon glyphicon-chevron-down pull-right"></span></div>
+                            <div class="collapse in" id="CommonParamsPanel">
+                                <div class="panel-body">
+                                    <iframe id="remember" name="remember" class="hidden"></iframe>
+                                    <form class="form-horizontal" target="remember" method="" onsubmit="return false;">
+                                        <fieldset>
+                                        <div class="form-group">
+                                            <div class="col-sm-3">
+                                                <label for="SelectMarketplace">Marketplace</label>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <select id="SelectMarketplace">
+                                                <!-- List of marketplaces -->
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6 parameter-description">
+                                                <p>The locale where you are making the request.</p>
+                                            </div>
+                                        </div><!-- Market Place Form -->
+                                        <div class="form-group">
+                                            <div class="col-sm-3">
+                                                <label for="AssociateTag">Associate Tag</label>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control-a" id="AssociateTag" autocomplete="on">
+                                            </div>
+                                            <div class="col-sm-6 parameter-description">
+                                                <p>An alphanumeric token that uniquely identifies you as an Associate. To obtain an Associate Tag, refer to <a id="BecomeAssociateLink" href="http://docs.aws.amazon.com/AWSECommerceService/latest/DG/becomingAssociate.html" target="_blank">Becoming an Associate</a>.</p>
+                                            </div>
+                                        </div><!-- Associate Tag Form -->
+                                        <div class="form-group">
+                                            <div class="col-sm-3">
+                                                <label for="AccessKeyID">Access Key ID</label>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control-a" id="AccessKeyID" autocomplete="on">
+                                            </div>
+                                            <div class="col-sm-6 parameter-description">
+                                                <p>Your Access Key ID which uniquely identifies you.</p>
+                                            </div>
+                                        </div><!-- Access Key ID Form -->
+                                        <div class="form-group">
+                                            <div class="col-sm-3">
+                                                <label for="SecretAccessKey">Secret Access Key</label>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <input type="password" class="form-control-a" id="SecretAccessKey" autocomplete="on">
+                                            </div>
+                                            <div class="col-sm-6 parameter-description">
+                                                <p>A key that is used in conjunction with the Access Key ID to cryptographically sign an API request. To retrieve your Access Key ID or Secret Access Key, refer to <a id="ManageYourAccountLink" href="http://docs.aws.amazon.com/AWSECommerceService/latest/DG/becomingDev.html" target="_blank">Becoming Product Advertising API Developer</a>.</p>
+                                            </div>
+                                        </div><!-- Secret Access Key Form -->
+                                        </fieldset>
+                                        <button id="SubmitButton" type="submit" class="hidden"></button>
+                                    </form> <!-- Authentication Form -->
+                                </div><!-- Common Params Panel Body -->
+                            </div><!-- Div for smooth Transition -->
+                        </div> <!-- Authentication Panel -->
+                    
+                        <div id="main">
+                            <h2 id="OperationName">Operation Name </h2> <!-- Page header for operation -->
+                            <p id="OperationDescription">Description</p>
+                            <div class="hr-a"></div>
+                            <div class="panel panel-default">
+                                <div id="SelIconRP" class="panel-heading-a" data-toggle="collapse" data-target="#ReqParamsPanel">Request parameters<span class="glyphicon glyphicon-chevron-up pull-right"></span></div>
+                                <div class="collapse in" id="ReqParamsPanel">
+                                    <span id="ExtractFromAmazonURL" class="btn-clipboard-AmazonURL">Extract parameters from an Amazon URL</span>
+                                    <div id="AmazonURLModal" class="modal fade" role="dialog">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content"  style="height:100%;">
+                                                <div class="modal-header">
+                                                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Extract parameters from an Amazon URL</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="form-group" style="margin-bottom:1px;">
+                                                            <div>
+                                                                <textarea class="form-control-a" rows="5" cols="40" id="AmazonURLTextArea" placeholder="Paste the URL from an Amazon search results page or a product detail page. StockNote will then create your request and response." style="resize:none;"></textarea>
+                                                                <div class="container-fluid" style="padding-right:0px;">
+                                                                    <button id="AmazonRequest" class="btn btn-dark-a pull-right" style="margin-top:5px;">Extract parameters and run request</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div> <!-- Modal Body -->
+                                            </div> <!--  Modal Content -->
+                                        </div> <!-- Modal Dialog -->    
+                                    </div> <!-- Extract From Amazon URL Modal -->
+                                    <div class="panel-body" id="DynamicRP">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <h4>Name</h4>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <h4>Value</h4>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h4>Description</h4>
+                                            </div>
+                                        </div> <!-- Parameter Table Headers -->
+                                        <div class="hr-a"></div>
+                                        <form id="RequestParametereForm" class="form-horizontal">
+                                            <div id="TemplateDiv" class="form-group">
+                                                <div class="col-sm-3 n">
+                                                    <label for="TemplateSelect"><a href="#" class="RemoveParam" style="visibility:hidden;"><span class="glyphicon glyphicon-remove"></span></a> Parameter Name<span style="color:red;">*</span></label>
+                                                </div>
+                                                <div class="col-sm-3 v">
+                                                    <select id="TemplateSelect">
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6 d parameter-description">
+                                                    <p style="overflow:hidden; text-overflow:ellipsis; width:100%;">Description of the parameter +  Exceptions</p>
+                                                </div>
+                                            </div>
+                                            <div id="AddNewForm" class="form-group">
+                                                <div class="col-sm-3">
+                                                    <label for="AddNewParameter"><a href="#"><span id="AddNewParamGlyph" class="glyphicon glyphicon-chevron-right"></span></a> Add a new parameter</label>
+                                                </div>
+                                                <div class="col-sm-3" id="AddNewRefresh">
+                                                    <select id="AddNew">
+                                                        <!-- List of valid parameters -->
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                </div>
+                                            </div>
+
+                                            <div no="TemplateDiv" class="form-group">
+                                                <div class="col-sm-3 n">
+                                                    <label for="TemplateSelect">Total Pages</label>
+                                                </div>
+                                                <div class="col-sm-3 v">
+                                                    <select id="totalPages" name="totalPages" class="form-control"></select>
+                                                </div>
+                                                <div class="col-sm-6 d parameter-description">
+                                                    <p style="overflow:hidden; text-overflow:ellipsis; width:100%;">Total Pages <strong> ( if search index is "All" then the max pages will be 5 and if the search index is not "All" then max page limit is 10 pages ) </strong></p>
+                                                </div>
+                                            </div>
+
+
+
+                                        </form> <!-- Dynamic Form -->
+                                    </div> <!-- Parameter Body -->
+                                    <div class="panel-footer">
+                                        <div class="col-sm-3">
+                                            <!-- Toggle Button For XML-JSON -->
+                                        </div>
+                                        <div class="col-sm-3">
+                                        </div>
+                                        <div class="col-sm-6">
+                                        
+
+                                            <button id="RequestButton" class="btn btn-primary-a pull-right" type="button" style="margin-left:10px;">Run request</button>
+                                            <button id="ClearParameters" type="button "class="btn btn-dark-a pull-right">Clear parameters</button>
+                                        </div>
+                                        <div class="clearfix"></div> <!-- Clearfix for fixing Float on Buttons inside well -->
+                                    </div><!-- Request Parameter Panel Footer -->
+                                </div><!-- div for smooth Collapse transition -->
+                            </div><!-- Parameters Panel -->
+                            
+                            <div class="panel panel-default" style="display: none">
+                                <div id="SelIconRURL" class="panel-heading-a" data-toggle="collapse" data-target="#ReqURLPanel">Request URL<span class="glyphicon glyphicon-chevron-up pull-right"></span></div>
+                                <div class="collapse in" id="ReqURLPanel">
+                                    <div class="panel-body">
+                                        <form>
+                                            <div class="form-group" style="margin-bottom:1px;">
+                                                <label for="UnsignedURLTextArea">Unsigned URL</label>
+                                                <div>
+                                                    <span id="CopyUnsignedURL" class="btn-clipboard-NVP" data-toggle="tooltip" title="Copy to clipboard" data-clipboard-target="UnsignedURLTextArea">Copy</span><textarea class="form-control-a" rows="5" cols="40" id="UnsignedURLTextArea" style="resize:none;">Signed URL Here</textarea>
+                                                    <div class="container-fluid" style="padding-right:0px;">
+                                                    <button id="UpdateRequest" class="btn btn-dark-a pull-right" style="margin-top:5px;">Extract parameters and run request</button></div>
+                                                </div>
+                                            </div>
+                                        </form> <!-- Unsigned URL Form -->
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="SignedURLTextArea">Signed URL</label>
+                                                <div>
+                                                    <span id="CopySignedURL" class="btn-clipboard-URL" data-toggle="tooltip" title="Copy to clipboard" data-clipboard-target="SignedURLTextArea">Copy</span><span id="NewTabSignedURL" class="btn-clipboard-NVP" data-toggle="tooltip" data-placement="top" title="Open in new tab"><span class="glyphicon glyphicon-new-window"></span></span><textarea readonly class="form-control-a" rows="5" cols="40" id="SignedURLTextArea" style="resize:none;">Signed URL Here</textarea>
+                                                </div>
+                                            </div>
+                                        </form> <!-- Signed URL Form -->
+                                    </div> <!-- Request URL Body -->
+                                </div><!-- div for smooth Collapse transition -->    
+                            </div><!-- Request URL Panel -->
+                 
+                            <p class="tab-header">Response</p>
+                            <div class="hr-a"></div>
+                            <ul class="nav nav-tabs-a" id="ResponseTabs">
+                                <li id="RenderedResponse" class="active ResponseTab"><a href="#RenderedSection" data-toggle="tab">Rendered response</a></li>
+                                <li id="XMLResponse" class="ResponseTab" style="display: none"><a href="#XMLSection">XML response</a></li>
+                                <li id="HTMLResponse" class="ResponseTab"  style="display: none"><a href="#HTMLResponseSection">HTML response</a></li>
+                            </ul> <!-- Tabs of Response -->
+                            <div class="tab-content">
+                                <div id="RenderedSection" class="tab-pane fade in active">
+                                    <div id="RenderedResponseDiv" class="well-R">
+                                        <div class="alert alert-info" role="alert">
+                                            <span id="InfoMessage">Rendered response will be displayed here</span> 
+                                        </div>
+                                    </div><!-- Rendered Response Section -->
+                                </div>
+                             
+                                
+                            </div> <!-- Tab-Content Response Tabs -->
+                            <div class="well-FR kk">
+                                <p id="pagination">
+                                    
+
+                                </p>
+                                <p id="FormattedResponse">Response time :  00.00 ms</p>
+
+
+                                <div class="pull-right">
+
+                                <div id="OutputEndpoints">
+                                </div>
+
+                                <button id="SendDataExternal" class="btn btn-primary-a pull-right" type="button" style="margin-left:10px;">
+                                <span class="spn1">Send to External (ES)</span>
+                                <div id="postLoading" style="display: none"><svg class="lds-spinner" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="rotate(0 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(30 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.8333333333333334s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(60 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.75s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(90 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.6666666666666666s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(120 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.5833333333333334s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(150 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.5s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(180 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.4166666666666667s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(210 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.3333333333333333s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(240 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.25s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(270 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.16666666666666666s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(300 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="-0.08333333333333333s" repeatCount="indefinite"></animate>
+  </rect>
+</g><g transform="rotate(330 50 50)">
+  <rect x="47" y="24" rx="9.4" ry="4.8" width="6" height="12" fill="#0a34e2">
+    <animate attributeName="opacity" values="1;0" times="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animate>
+  </rect>
+</g></svg>
+
+</div>
+                                 </button></div>
+                               
+                            </div> <!-- Well for Formatted Response-->
+
+                           
+                            <div class="hr-a"></div>
+                            
+                            
+                        </div><!--Right Panel : Operation Specific Page -->
+                    </div><!-- Operation Specific Page Ends here -->
+                </div><!-- Right Section ends here -->
+            </div>  <!-- Major Row Ends Here -->
+        </div> <!-- Container Fluid -->
+    </body>
+</html>
